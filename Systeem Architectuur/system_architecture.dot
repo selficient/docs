@@ -1,0 +1,35 @@
+digraph system_architecture {
+
+# global atributes
+
+    graph [label   = <<br/><br/><b>Devices Systeem Architectuur</b>>,
+           splines = polyline,
+           pad     = 0.5,
+           nodesep = 1,
+           ranksep = 1,
+           linesep = 1
+           bgcolor = "#FFFFFFFF"]
+
+    node [shape  = box,
+          margin = 0.1]
+
+ #  edge [arrowtail = none,
+ #        arrowhead = none,
+ #        dir       = both,
+ #        decorate  = "true"]
+
+
+# Labels
+
+    VR_Headset
+    PC
+    Server
+
+
+# Connections
+
+
+    VR_Headset -> PC     [headlabel="1  ", taillabel="1  "]
+    PC         -> Server [headlabel="1  ", taillabel="multiple  "]
+
+}
