@@ -8,7 +8,8 @@ digraph system_architecture {
            nodesep = 1,
            ranksep = 1,
            linesep = 1
-           bgcolor = "#FFFFFFFF"]
+           bgcolor = "#FFFFFFFF"
+           rankdir = LR]
 
     node [shape  = box,
           margin = 0.1]
@@ -24,12 +25,13 @@ digraph system_architecture {
     VR_Headset
     PC
     Server
-
+    Huis [label = "Huis\n(optional)"]
 
 # Connections
 
 
-    VR_Headset -> PC     [headlabel="1  ", taillabel="1  "]
-    PC         -> Server [headlabel="1  ", taillabel="multiple  "]
+    VR_Headset -> PC     [headlabel="1  ", taillabel="  1"]
+    PC         -> Server [headlabel="1  ", taillabel="  1..*"]
+    Server     -> Huis   [headlabel="0..1  ", taillabel="  1"]
 
 }
